@@ -8,33 +8,56 @@ fetch("https://opensheet.elk.sh/1wLuU7IKkp0cR2He09kU4lo84ue2qef_gUjvCsJUljmU/she
     .then((data) => {
         for (let item of data) {
             html += `
-            <div class="Identifier"> 
-            <p>${item.Idendtifier} </p> 
-  
-                 <div class="Week" >
+            <div class="Identifier" id="${item.Idendtifier}"> 
+            `;
+
+            if (item.Week) {
+                html += `                 
+                <div class="Week">
                     <p>${item.Week} </p>
-                 </div>
-                 <div class="Description"> 
-                    <img src="${item.Description}"></img>
-                </div>
+                </div>`;
+            };
+            if (item.Description) {
+                html += `
+                <div class="Description"> 
+                    <p>${item.Description}</p>
+                </div>`;
+            };
+            if (item.Tasks) {
+                html += `
                 <div class="Tasks"> 
                     <p>${item.Tasks} </p> 
                 </div>
+            `;
+            };
+            if (item.Todo) {
+                html += `
                 <div class="Todo"> 
                     <p>${item.Todo} </p> 
                 </div>
+            `;
+            };
+            if (item.Feedback) {
+                html += `
                 <div class="Feedback"> 
                     <p>${item.Feedback} </p> 
                 </div>
+            `;
+            };
+            if (item.Keywords) {
+                html += `
                 <div class="Keywords"> 
                     <p>${item.Keywords} </p> 
                 </div>
-                <div class="Image"> 
-                    <p>${item.Image} </p> 
-                 </div>
+                `;
+            };
+            if (item.image) {
+                html += `<div class="Image">
+                    <img src="${item.Image}"></img>
+                </div>`
+            };
 
-            </div>
-    `;
+            html += `</div>`;
         }
         output.innerHTML = html;
 
