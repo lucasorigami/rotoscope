@@ -2,16 +2,20 @@ body {
     background-color: black;
     margin: 0;
     position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+  margin-top: 3vw;
 }
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
+   
     color: white;
 }
 
 p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 300%;
+    font-size: 1em;
     color: white;
 }
 
@@ -44,7 +48,7 @@ a:hover {
 }
 
 .content {
-    max-width: 60%;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -55,10 +59,10 @@ a:hover {
 #other-platforms{
 display: none;
 }
-
-canvas {
-    /* position: absolute; */
+.links{
+  margin-bottom: 5vw;
 }
+
 
 #background {
     position: fixed;
@@ -72,8 +76,6 @@ canvas {
     justify-content: center;
     z-index: 3;
     max-height: 150px;
-
-    /* height: 20px */
 }
 
 img {
@@ -83,76 +85,66 @@ img {
 
 
 /* Json elements */
+.Identifier{
+  background-color: transparent;
+  border: white solid;
+  border-width: 1px;
+  width: 40vw;
+  /* display: flex;
+  flex-wrap: wrap; */
+}
 
+.outputContainer{
+  display: flex;
+  column-gap: 30vw;
+}
 
-/* h1 {
-    background-color: transparent;
-    border-style: solid;
-    border-width: .4vw;
-    border-color: #56C7C4;
-    color: #767676;
-    backdrop-filter: blur(5px);
-    width: 50vw;
-    font-size: 2em;
-    margin-top: 5vw;
-    margin-left: 20vw;
-    padding: 2vw;
-    text-align: center;
-    border-radius: 20px;
-    transition: .4s;
-    animation-name: example;
-    animation-duration: 3s;
-    animation-direction: alternate-reverse;
-    animation-iteration-count: infinite;
-    cursor: pointer;
-  } */
-/*   
-  
-  h1:hover {
-    background-color: #56C7C4;
-    border-style: solid;
-    border-width: .4vw;
-    border-color: #56C7C4;
-    color: #767676;
-    backdrop-filter: blur(5px);
-    width: 50vw;
-    font-size: 2em;
-    margin-top: 5vw;
-    margin-left: 20vw;
-    padding: 2vw;
-    text-align: center;
-    border-radius: 20px;
-    transition: .4s;
-  } */
-  
-  #projectTitle {
-    color: #767676;
-  }
-  
-  .templateContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    width: 50vw;
-    background-size: 100% 100%;
-    border-radius: 20px;
-    margin-left: 20vw;
-    padding: 2vw;
-    color: #767676;
-    text-align: left;
-    white-space: pre-wrap;
-    backdrop-filter: blur(5px);
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  .descriptionContainer {
-    margin-top: -4vw;
-  }
+.Week{
+  font-size: 3em;
+  background-color: transparent;
+  border: white solid;
+  border-width: 1px;
+  padding:1vw;
+}
+.Description{
+  font-size: 1em;
+  background-color: transparent;
+  border: white solid;
+  border-width: 1px;
+  padding:1vw;
+}
 
-  .outputContainer {
-    position: relative;
-  }
+.Tasks{
+  background-color: transparent;
+  border: white solid;
+  border-width: 1px;
+  padding:1vw;
+}
 
+.Todo{
+  background-color: transparent;
+  border: white solid;
+  border-width: 1px;
+  padding:1vw;
+}
+
+.Feedback{
+  background-color: transparent;
+  border: white solid;
+  border-width: 1px;
+  padding:1vw;
+}
+
+.Keywords{
+  background-color: transparent;
+  border: white solid;
+  border-width: 1px;
+  padding:1vw;
+}
+
+.Image{
+  background-color: black;
+}
 
 /* Json Output */
 
@@ -160,6 +152,8 @@ img {
 #output {
     display: flex;
     flex-direction: column;
+
+    row-gap: 10vw;
     justify-content: center;
     width: auto;
     height: auto;
